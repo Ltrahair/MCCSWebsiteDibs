@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/banner', function(){return view('banner');});
