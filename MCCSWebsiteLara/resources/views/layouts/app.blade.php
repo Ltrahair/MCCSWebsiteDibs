@@ -6,38 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         
-        body{margin:0;
-        padding:0;
-    font-family: Arial;
-background:red;}
+     
 .underdasee{
     background:lightcoral;
     width:100%;
     height:100%;
     z-index:-1;
 }
+        body{height:100%; width:100%; margin:0; top:-20px;}
         ul{
             list-style: none;
         }
-        .nav{
+        ul{
+            top:0;
             background:red;
             width:100%;
-            height:50px;
+            height:54px;
+            margin:0;
         
         }
-        .first{
+        .navElems{
+            padding-left:0;
+        }
+
+        .first a{
+            color:silver;
+            font-family:Arial;
+            background:red;
+            float:left;
+            margin:0;
+            font-size:20px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:15px;
+            padding-bottom:15px;
+            text-decoration: none;
+        } 
+        .first {
+            
             color:silver;
             background:red;
             float:left;
             margin:0;
-            height:50px;
-        } 
+            transition background-color 0.1s;
+        }
         h1{
             margin: 0 0 0 10px;
             
             padding:0;
         }  
-        
+        a{text-decoration: none; color:black;}
+        a:active{color:black; text-decoration: none; background:darkred;}
+      .first a:hover{color:black;             
+        transition: background-color 0.1s;
+        text-decoration: none; background:darkred;}
+
+        .final{float:right;}
+        .final a{background:white;
+                border:black solid 2px;
+                border-radius: 10px;
+                margin:2px;
+                top:20px;
+                right:40px;
+                position:relative;
+                padding:10px;
+                font-style:none;}
         .secondary{overflow-y:hidden;
             margin-top:20px;
                     height:0;
@@ -54,25 +87,17 @@ background:red;}
     </style>
 </head>
 @section('navbar')
-<nav class="nav">
    <ul class="navElems"> 
-    <li class="first">
-    <h1>stuffafdsa</h1>
-     <ul class="secondary">
-        <li><a href="">stuff1adfadsaffdsafdsas<a></li>
-        <li><a>stuff2<a></li>
-        </ul>    
-   </li>
-   <li class="first">
-        <h1>stuff</h1>
-         <ul class="secondary">
-            <li><a>stuff1<a></li>
-            <li><a>stuff2<a></li>
-        </ul>    
-       </li>
+
+         <li class="first"><a href="/home">Home</a></li>
+         <li class="first"><a href="/student">Student Pages</a></li>
+         <li class="first"><a href="/challenge">Current Challenges</a></li>
+   
+       <li class="final">
+            <a href="login">Login</a>
+           </li>
 </ul>
 
-</nav>
 @show
 
 <div class="underdasee">
